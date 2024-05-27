@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"> <!-- Définir le jeu de caractères comme UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Assurer un bon affichage sur les appareils mobiles -->
+    <title>Mes Passions - Nathan Vautier</title> <!-- Titre de la page -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Police d'écriture */
+            background-color: #f0f0f0; /* Couleur de fond tournant autour du marron/gris foncé */
+            color: #303030; /* Couleur du texte */
+            margin: 0; /* Pas de marge autour du corps */
+            padding: 20px; /* Espacement intérieur de 20px */
+        }
+        h1 {
+            color: #D80314; /* Couleur du titre en rouge */
+            text-align: center; /* Centrer le texte du titre */
+        }
+        .gallery {
+            display: flex; /* Utiliser le modèle flexbox */
+            flex-wrap: wrap; /* Permettre aux éléments de se renvoyer à la ligne */
+            justify-content: space-around; /* Espacement égal autour des éléments */
+        }
+        .gallery-item {
+            background-color: #fff; /* Couleur de fond blanche */
+            border-radius: 5px; /* Coins arrondis */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre portée légère */
+            margin: 10px; /* Espacement extérieur de 10px */
+            text-align: center; /* Centrer le texte */
+            width: calc(25% - 20px); /* Quatre éléments par ligne avec marges */
+            cursor: pointer; /* Curseur de pointeur pour indiquer un élément cliquable */
+        }
+        .gallery-item img {
+            max-width: 100%; /* Largeur maximale de 100% du conteneur */
+            border-top-left-radius: 5px; /* Coins supérieurs arrondis */
+            border-top-right-radius: 5px; /* Coins supérieurs arrondis */
+        }
+        .gallery-item p {
+            padding: 10px; /* Espacement intérieur de 10px */
+        }
+        /* Styles pour la fenêtre modale */
+        .modal {
+            display: none; /* Masquer par défaut */
+            position: fixed; /* Positionnement fixe par rapport à la fenêtre */
+            z-index: 1; /* Niveau de superposition élevé */
+            padding-top: 60px; /* Espacement supérieur de 60px */
+            left: 0;
+            top: 0;
+            width: 100%; /* Largeur de 100% de la fenêtre */
+            height: 100%; /* Hauteur de 100% de la fenêtre */
+            overflow: auto; /* Ajout de défilement si nécessaire */
+            background-color: rgba(0,0,0,0.9); /* Fond noir semi-transparent */
+        }
+        .modal-content {
+            margin: auto; /* Centrage automatique horizontal */
+            display: block; /* Affichage en bloc */
+            width: 80%; /* Largeur de 80% de la fenêtre */
+            max-width: 700px; /* Largeur maximale de 700px */
+        }
+        .modal-content {
+            animation-name: zoom; /* Nom de l'animation */
+            animation-duration: 0.6s; /* Durée de l'animation */
+        }
+        @keyframes zoom {
+            from {transform: scale(0)} /* Départ de l'animation avec échelle 0 */
+            to {transform: scale(1)} /* Fin de l'animation avec échelle 1 */
+        }
+        .close {
+            position: absolute; /* Positionnement absolu */
+            top: 15px; /* Position en haut à 15px du bord */
+            right: 35px; /* Position à droite à 35px du bord */
+            color: #f1f1f1; /* Couleur du bouton de fermeture */
+            font-size: 40px; /* Taille de police du bouton */
+            font-weight: bold; /* Texte en gras */
+            transition: 0.3s; /* Transition de 0.3s pour les effets */
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb; /* Changement de couleur au survol */
+            text-decoration: none; /* Pas de soulignement */
+            cursor: pointer; /* Curseur de pointeur */
+        }
+    </style>
+</head>
+<body>
+    <h1>Mes Passions</h1> <!-- Titre principal de la page -->
+    <div class="gallery"> <!-- Conteneur pour la galerie d'images -->
+        <!-- Premier élément de la galerie -->
+        <div class="gallery-item" onclick="openModal('Muscu.jpeg', 'Axel, Hennebont')">
+            <img src="Muscu.jpeg" alt="Photo 1"> <!-- Image de l'élément -->
+            <p>Musculation avec sa copine</p> <!-- Description de l'image -->
+        </div>
+        <!-- Deuxième élément de la galerie -->
+        <div class="gallery-item" onclick="openModal('M3E30.jpeg', 'Manche')">
+            <img src="M3E30.jpeg" alt="Photo 2"> <!-- Image de l'élément -->
+            <p>L'ancienne automobile</p> <!-- Description de l'image -->
+        </div>
+        <!-- Troisième élément de la galerie -->
+        <div class="gallery-item" onclick="openModal('Porsche 918 spyder.jpeg', 'Monaco')">
+            <img src="Porsche 918 spyder.jpeg" alt="Photo 3"> <!-- Image de l'élément -->
+            <p>Les voitures luxueuses</p> <!-- Description de l'image -->
+        </div>
+        <!-- Quatrième élément de la galerie -->
+        <div class="gallery-item" onclick="openModal('ParcAsterix.jpeg', 'Asterix')">
+            <img src="ParcAsterix.jpeg" alt="Photo 4"> <!-- Image de l'élément -->
+            <p>Les parcs d'attraction</p> <!-- Description de l'image -->
+        </div>
+    </div>
+
+    <!-- La fenêtre modale -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span> <!-- Bouton de fermeture de la fenêtre modale -->
+        <img class="modal-content" id="img01"> <!-- Image affichée dans la fenêtre modale -->
+        <div id="caption"></div> <!-- Description de l'image dans la fenêtre modale -->
+    </div>
+    <script src="NV.js"></script> <!-- Inclusion du fichier JavaScript pour les interactions -->
+</body>
+</html>

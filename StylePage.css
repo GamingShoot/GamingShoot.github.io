@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif; /* Police de caractère pour tout le document */
+    background-color: #f0f0f0; /* Couleur de fond de la page */
+    color: #333; /* Couleur du texte */
+    margin: 0; /* Annuler la marge par défaut du navigateur */
+    padding: 0; /* Annuler le padding par défaut du navigateur */
+}
+
+header {
+    text-align: center; /* Centrer le texte dans l'en-tête */
+    background-color: #8a6969; /* Couleur de fond de l'en-tête */
+    color: #D80314; /* Couleur du texte de l'en-tête */
+    padding: 20px 0; /* Padding en haut et en bas de 20px */
+    margin-bottom: 20px; /* Marge en bas de l'en-tête */
+    cursor: pointer; /* Curseur de la souris change pour indiquer que l'en-tête est cliquable */
+}
+
+header:hover h2 {
+    color: green; /* Changer la couleur du texte en vert lors du survol de l'en-tête */
+}
+
+.button {
+    position: absolute; /* Position absolue par rapport à l'élément parent */
+    top: 20px; /* Positionner à 20px du haut de la page */
+    left: 20px; /* Positionner à 20px de la gauche de la page */
+    background-color: #D80314; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Padding du bouton */
+    text-decoration: none; /* Enlever la décoration de texte (soulignement) */
+    border-radius: 5px; /* Coins arrondis du bouton */
+}
+
+.button:hover {
+    background-color: #303030; /* Changer la couleur de fond du bouton lors du survol */
+}
+
+h1, h2, h3 {
+    color: #D80314; /* Couleur des titres */
+}
+
+h3 a {
+    color: #D80314; /* Couleur des liens dans les titres h3 */
+    text-decoration: none; /* Enlever la décoration de texte (soulignement) */
+}
+
+h3 a:hover {
+    color: lightblue; /* Changer la couleur des liens lors du survol */
+}
+
+section {
+    margin-bottom: 30px; /* Marge en bas de chaque section */
+    padding: 20px; /* Padding autour du contenu de chaque section */
+    background-color: #303030; /* Couleur de fond des sections */
+    border-radius: 5px; /* Coins arrondis des sections */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre des sections pour effet de profondeur */
+}
+
+footer {
+    background-color: #8a6969; /* Couleur de fond du pied de page */
+    color: white; /* Couleur du texte du pied de page */
+    padding: 20px; /* Padding autour du contenu du pied de page */
+    text-align: center; /* Centrer le texte dans le pied de page */
+}
+
+ul {
+    list-style: none; /* Enlever les puces de liste par défaut */
+    padding: 0; /* Enlever le padding par défaut des listes */
+    margin: 0; /* Enlever la marge par défaut des listes */
+}
+
+li {
+    padding: 10px 0; /* Padding en haut et en bas de chaque élément de liste */
+    border-bottom: 1px solid #ccc; /* Bordure en bas de chaque élément de liste */
+}
+
+li:last-child {
+    border-bottom: none; /* Enlever la bordure en bas du dernier élément de liste */
+}
+
+.skill-bar {
+    background-color: #696969; /* Couleur de fond des barres de niveau de compétence */
+    height: 20px; /* Hauteur des barres de niveau de compétence */
+    border-radius: 5px; /* Coins arrondis des barres de niveau de compétence */
+    margin-top: 5px; /* Marge au-dessus des barres de niveau de compétence */
+}
+
+.skill-level {
+    height: 100%; /* Hauteur complète des barres de niveau de compétence */
+    border-radius: 5px; /* Coins arrondis des barres de niveau de compétence */
+}
+

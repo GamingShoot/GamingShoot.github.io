@@ -1,0 +1,97 @@
+/* Style global du corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Police d'écriture */
+    background-color: #f0f0f0; /* Couleur de fond tournant autour du marron/gris foncé */
+    color: #303030; /* Couleur du texte */
+    margin: 0; /* Pas de marge autour du corps */
+    padding: 20px; /* Espacement intérieur de 20px */
+}
+
+/* Style pour les titres de niveau 1 */
+h1 {
+    color: #D80314; /* Couleur du titre en rouge */
+    text-align: center; /* Centrer le texte du titre */
+}
+
+/* Style pour la galerie d'images */
+.gallery {
+    display: flex; /* Utiliser le modèle flexbox */
+    flex-wrap: wrap; /* Permettre aux éléments de se renvoyer à la ligne */
+    justify-content: space-around; /* Espacement égal autour des éléments */
+}
+
+/* Style pour chaque élément de la galerie */
+.gallery-item {
+    background-color: #fff; /* Couleur de fond blanche */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre portée légère */
+    margin: 10px; /* Espacement extérieur de 10px */
+    text-align: center; /* Centrer le texte */
+    width: calc(25% - 20px); /* Quatre éléments par ligne avec marges */
+    cursor: pointer; /* Curseur de pointeur pour indiquer un élément cliquable */
+}
+
+/* Style pour les images dans chaque élément de la galerie */
+.gallery-item img {
+    max-width: 100%; /* Largeur maximale de 100% du conteneur */
+    border-top-left-radius: 5px; /* Coins supérieurs arrondis */
+    border-top-right-radius: 5px; /* Coins supérieurs arrondis */
+}
+
+/* Style pour les paragraphes dans chaque élément de la galerie */
+.gallery-item p {
+    padding: 10px; /* Espacement intérieur de 10px */
+}
+
+/* Styles pour la fenêtre modale */
+.modal {
+    display: none; /* Masquer par défaut */
+    position: fixed; /* Positionnement fixe par rapport à la fenêtre */
+    z-index: 1; /* Niveau de superposition élevé */
+    padding-top: 60px; /* Espacement supérieur de 60px */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur de 100% de la fenêtre */
+    height: 100%; /* Hauteur de 100% de la fenêtre */
+    overflow: auto; /* Ajout de défilement si nécessaire */
+    background-color: rgba(0,0,0,0.9); /* Fond noir semi-transparent */
+}
+
+/* Style pour le contenu de la fenêtre modale */
+.modal-content {
+    margin: auto; /* Centrage automatique horizontal */
+    display: block; /* Affichage en bloc */
+    width: 80%; /* Largeur de 80% de la fenêtre */
+    max-width: 700px; /* Largeur maximale de 700px */
+}
+
+/* Animation pour le contenu de la fenêtre modale */
+.modal-content {
+    animation-name: zoom; /* Nom de l'animation */
+    animation-duration: 0.6s; /* Durée de l'animation */
+}
+
+/* Définition de l'animation zoom */
+@keyframes zoom {
+    from {transform: scale(0)} /* Départ de l'animation avec échelle 0 */
+    to {transform: scale(1)} /* Fin de l'animation avec échelle 1 */
+}
+
+/* Style pour le bouton de fermeture de la fenêtre modale */
+.close {
+    position: absolute; /* Positionnement absolu */
+    top: 15px; /* Position en haut à 15px du bord */
+    right: 35px; /* Position à droite à 35px du bord */
+    color: #f1f1f1; /* Couleur du bouton de fermeture */
+    font-size: 40px; /* Taille de police du bouton */
+    font-weight: bold; /* Texte en gras */
+    transition: 0.3s; /* Transition de 0.3s pour les effets */
+}
+
+/* Style du bouton de fermeture au survol */
+.close:hover,
+.close:focus {
+    color: #bbb; /* Changement de couleur au survol */
+    text-decoration: none; /* Pas de soulignement */
+    cursor: pointer; /* Curseur de pointeur */
+}
